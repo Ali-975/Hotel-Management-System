@@ -1,0 +1,43 @@
+CREATE SCHEMA `hotel_and_motel` ;
+=========================================
+CREATE TABLE `hotel_and_motel`.`register` (
+  `name` VARCHAR(45) NULL,
+  `username` VARCHAR(45) NOT NULL,
+  `contact` VARCHAR(45) NULL,
+  `email` VARCHAR(45) NULL,
+  `securityQ` VARCHAR(45) NULL,
+  `securityA` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NULL,
+  PRIMARY KEY (`username`));
+==================================================
+CREATE TABLE `hotel_and_motel`.`customer` (
+  `reference` INT NOT NULL,
+  `name` VARCHAR(45) NULL,
+  `father_name` VARCHAR(45) NULL,
+  `gender` VARCHAR(45) NULL,
+  `id_type` VARCHAR(45) NULL,
+  `id_no` VARCHAR(45) NULL,
+  `cell_no` VARCHAR(45) NULL,
+  `city` VARCHAR(45) NULL,
+  `nationality` VARCHAR(45) NULL,
+  `address` VARCHAR(45) NULL,
+  PRIMARY KEY (`reference`));
+===========================================
+CREATE TABLE `hotel_and_motel`.`room` (
+  `reference` INT NOT NULL,
+  `checkin_date` VARCHAR(45) NULL,
+  `checkout_date` VARCHAR(45) NULL,
+  `room_type` VARCHAR(45) NULL,
+  `room_no` VARCHAR(45) NULL,
+  `meal` VARCHAR(45) NULL,
+  `duration` VARCHAR(45) NULL,
+  `package` VARCHAR(45) NULL,
+  `cost` VARCHAR(45) NULL,
+  PRIMARY KEY (`reference`));
+==============================================
+CREATE TABLE `hotel_and_motel`.`details` (
+  `floor` VARCHAR(45) NULL,
+  `room_type` VARCHAR(45) NULL,
+  `room_no` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`room_no`));
+=================================================
